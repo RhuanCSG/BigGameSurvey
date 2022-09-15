@@ -27,10 +27,12 @@ public class Game implements Serializable {
 	private String title;
 	private Platform platform;
 	
+
 	@ManyToOne
 	@JoinColumn(name = "genre_id")
 	private Genre genre;
 	
+
 	@OneToMany(mappedBy = "game")
 	private List<Record> records = new ArrayList<>();
 
@@ -60,11 +62,11 @@ public class Game implements Serializable {
 		this.title = title;
 	}
 
-	public Platform getPlatfmor() {
+	public Platform getPlatform() {
 		return platform;
 	}
 
-	public void setPlatfmor(Platform platform) {
+	public void setPlatform(Platform platform) {
 		this.platform = platform;
 	}
 
